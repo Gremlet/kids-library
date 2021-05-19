@@ -8,15 +8,13 @@
     justify-content: center;
     position: relative;
 
-    .back {
-        font-size: 3em;
-        position: absolute;
-        top: 100px;
-        left: 50px;
-        color: #8a8a8a;
-    }
-
     .cover-art {
+        .back {
+            font-size: 3em;
+            position: absolute;
+            top: -75px;
+            color: #8a8a8a;
+        }
         width: 390px;
         height: 464px;
         border-radius: 2px;
@@ -30,19 +28,17 @@
         border-radius: 2px;
 
         .line-details {
-            border-left: rgba(0, 0, 0, 0.2) solid 2px;
+            border-left: rgba(0, 0, 0, 0.2) solid 4px;
             height: 464px;
             position: absolute;
-            left: 36px;
+            left: 24px;
         }
 
         .big-title {
-            // top, right, bottom, left
-
             margin: 0px 20px 2px 60px;
         }
         .big-author {
-            margin: 0px 20px 10px 60px;
+            margin: 0px 20px 32px 60px;
         }
     }
 
@@ -54,33 +50,38 @@
         color: rgba(255, 255, 255, 0.856);
 
         .blurb-title {
-            margin: 10px 0 0 16px;
+            margin: 0px 0 0 32px;
         }
         .blurb-author {
-            margin: 2px 0 2px 16px;
+            margin: 0 0 0 32px;
         }
 
         .blurb-para {
-            margin: 5px 5px 2px 16px;
-            font-size: 0.85em;
-            text-align: justify;
+            margin: 12px 5px 2px 32px;
+            line-height: 160%;
+            font-size: 0.8em;
+            // text-align: justify;
         }
         .info {
             background-color: rgba(196, 196, 196, 0.08);
-            width: 90%;
-            // height: 20%;
-            margin: auto;
-
+            width: 92%;
             border-radius: 2px;
             font-size: 0.85em;
-            padding: 2px;
+            padding-left: 15px;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            justify-content: space-evenly;
-
+            justify-content: space-between;
+            align-content: center;
             position: absolute;
-            bottom: 65px;
-            left: 40px;
+            bottom: 60px;
+            left: 32px;
+
+            .pages {
+                margin-top: 5px;
+            }
+            .publisher {
+                margin-top: 5px;
+            }
         }
         .read-it {
             border: none;
@@ -89,7 +90,7 @@
             font-weight: bold;
             position: absolute;
             bottom: 0px;
-            left: 50px;
+            left: 32px;
         }
     }
 }

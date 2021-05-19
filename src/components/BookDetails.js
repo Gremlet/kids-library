@@ -11,11 +11,10 @@ function BookDetails(props) {
     }
     return (
         <div className="detail">
-            <div className="back" onClick={props.update}>
-                <IoArrowBackCircle />
-            </div>
-
             <div className="cover-art" style={coverStyle}>
+                <div className="back" onClick={props.update}>
+                    <IoArrowBackCircle />
+                </div>
                 <div className="line-details"></div>
                 <h1 className="big-title">{props.title}</h1>
                 <p className="big-author">{props.author}</p>
