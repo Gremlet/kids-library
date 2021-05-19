@@ -1,0 +1,95 @@
+.detail {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background-color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .back {
+        font-size: 3em;
+        position: absolute;
+        top: 100px;
+        left: 50px;
+        color: #8a8a8a;
+    }
+
+    .cover-art {
+        width: 390px;
+        height: 464px;
+        border-radius: 2px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        flex-direction: column;
+        color: black;
+        position: relative;
+        box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+        border-radius: 2px;
+
+        .line-details {
+            border-left: rgba(0, 0, 0, 0.2) solid 2px;
+            height: 464px;
+            position: absolute;
+            left: 36px;
+        }
+
+        .big-title {
+            // top, right, bottom, left
+
+            margin: 0px 20px 2px 60px;
+        }
+        .big-author {
+            margin: 0px 20px 10px 60px;
+        }
+    }
+
+    .blurb {
+        width: 390px;
+        height: 464px;
+        background-color: #222222;
+        position: relative;
+        color: rgba(255, 255, 255, 0.856);
+
+        .blurb-title {
+            margin: 10px 0 0 16px;
+        }
+        .blurb-author {
+            margin: 2px 0 2px 16px;
+        }
+
+        .blurb-para {
+            margin: 5px 5px 2px 16px;
+            font-size: 0.85em;
+            text-align: justify;
+        }
+        .info {
+            background-color: rgba(196, 196, 196, 0.08);
+            width: 90%;
+            // height: 20%;
+            margin: auto;
+
+            border-radius: 2px;
+            font-size: 0.85em;
+            padding: 2px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-evenly;
+
+            position: absolute;
+            bottom: 65px;
+            left: 40px;
+        }
+        .read-it {
+            border: none;
+            padding: 16px;
+            border-radius: 5px;
+            font-weight: bold;
+            position: absolute;
+            bottom: 0px;
+            left: 50px;
+        }
+    }
+}
