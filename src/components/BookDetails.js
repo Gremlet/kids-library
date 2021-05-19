@@ -41,7 +41,7 @@ function BookDetails(props) {
                     </p>
                 </div>
                 <button className="read-it" onclick={() => goBack}>
-                    Yes! I want to read it!
+                    Oh! I want to read it!
                 </button>
             </div>
         </div>
