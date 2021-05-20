@@ -1,47 +1,42 @@
 import '../scss/bookdetails.scss'
 import { IoArrowBackCircle } from 'react-icons/io5'
 
-function BookDetails(props) {
+function BookDetails({ currentBook, close }) {
     let coverStyle = {
-        background: `linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), ${props.color}`,
+        background: `linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), ${currentBook.color}`,
     }
 
-    function goBack() {
-        props.update()
-    }
     return (
         <div className="detail">
             <div className="cover-art" style={coverStyle}>
-                <div className="back" onClick={props.update}>
+                <div className="back" onClick={close}>
                     <IoArrowBackCircle />
                 </div>
                 <div className="line-details"></div>
-                <h1 className="big-title">{props.title}</h1>
-                <p className="big-author">{props.author}</p>
+                <h1 className="big-title">{currentBook.title}</h1>
+                <p className="big-author">{currentBook.author}</p>
             </div>
             <div className="blurb">
-                <h1 className="blurb-title">{props.title}</h1>
-                <p className="blurb-author">{props.author}</p>
-                <p className="blurb-para">{props.plot}</p>
+                <h1 className="blurb-title">{currentBook.title}</h1>
+                <p className="blurb-author">{currentBook.author}</p>
+                <p className="blurb-para">{currentBook.plot}</p>
                 <div className="info">
                     <p className="audience">
                         <strong>Audience: </strong>
-                        {props.audience}
+                        {currentBook.audience}
                     </p>
                     <p className="published">
-                        <strong>First published: </strong> {props.year}
+                        <strong>First published: </strong> {currentBook.year}
                     </p>
                     <p className="pages">
-                        <strong>Pages: </strong> {props.pages}
+                        <strong>Pages: </strong> {currentBook.pages}
                     </p>
                     <p className="publisher">
                         <strong>Publisher: </strong>
-                        {props.publisher}
+                        {currentBook.publisher}
                     </p>
                 </div>
-                <button className="read-it" onclick={() => goBack}>
-                    Oh! I want to read it!
-                </button>
+                <button className="read-it">Oh! I want to read it!</button>
             </div>
         </div>
     )

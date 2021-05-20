@@ -13,7 +13,7 @@ function App() {
         setCurrentBook(clicked)
     }
 
-    function showList() {
+    function close() {
         setShowDetails(!showDetails)
     }
 
@@ -22,36 +22,10 @@ function App() {
     }, [currentBook])
 
     let bookList = books.map((book) => {
-        return (
-            <BookCover
-                id={book.id}
-                title={book.title}
-                author={book.author}
-                color={book.color}
-                publisher={book.publisher}
-                year={book.year}
-                pages={book.pages}
-                plot={book.plot}
-                audience={book.audience}
-                update={showAllDetails}
-                key={book.id}
-            />
-        )
+        return <BookCover book={book} update={showAllDetails} key={book.id} />
     })
 
-    let bookDesc = (
-        <BookDetails
-            title={currentBook.title}
-            author={currentBook.author}
-            publisher={currentBook.publisher}
-            year={currentBook.year}
-            pages={currentBook.pages}
-            plot={currentBook.plot}
-            audience={currentBook.audience}
-            color={currentBook.color}
-            update={showList}
-        />
-    )
+    let bookDesc = <BookDetails currentBook={currentBook} close={close} />
 
     return (
         <div className="App">
