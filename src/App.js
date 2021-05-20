@@ -17,8 +17,9 @@ function App() {
         setShowDetails(!showDetails)
     }
 
+    // Not strictly necessary
     useEffect(() => {
-        console.log('current book: ', currentBook)
+        console.log('current book: ', currentBook.title)
     }, [currentBook])
 
     let bookList = books.map((book) => {
